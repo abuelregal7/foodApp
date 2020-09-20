@@ -1,9 +1,9 @@
 //
 //  ResturantViewController.swift
-//  FoodDelivery
+//  foodApp
 //
-//  Created by Osama on 10/27/19.
-//  Copyright © 2019 Osama Gamal. All rights reserved.
+//  Created by Ahmed on 6/19/20.
+//  Copyright © 2020 Ahmed. All rights reserved.
 //
 
 import UIKit

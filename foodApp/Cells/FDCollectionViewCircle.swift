@@ -11,7 +11,7 @@ import UIKit
 class FDCollectionViewCircle: UICollectionViewCell {
     
     let image = FDImageView(cornerRadius: 25)
-    let title = GFTitleLable(textAlignment: .center, fontZize: 14)
+    let title = GFTitleLable(textAlignment: .center, fontZize: 14, textColor: .white)
     
     static let reuseID  = "FollowerCell"
     
@@ -32,7 +32,7 @@ class FDCollectionViewCircle: UICollectionViewCell {
         guard let model = home else { return }
         if let image = model.image {
             self.image.kf.indicatorType = .activity
-            self.image.kf.setImage(with: URL(string: image))
+            self.image.kf.setImage(with: URL(string: image)) 
             self.title.text = model.title
         }
 //        image.downloadImage(from: home.image!)
@@ -56,10 +56,10 @@ class FDCollectionViewCircle: UICollectionViewCell {
             image.widthAnchor.constraint(equalToConstant: 50),
             
             title.topAnchor.constraint(equalTo: image.bottomAnchor),
-            title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 1),
+            title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             //title.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 5),
             title.widthAnchor.constraint(equalToConstant: 60),
-            title.heightAnchor.constraint(equalToConstant: 40)
+            title.heightAnchor.constraint(equalToConstant: 35)
             
         ])
         

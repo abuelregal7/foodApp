@@ -27,20 +27,14 @@ class MainVC: UIViewController {
         tabBar.delegate = self
         
         // creating VCs:
-        homeVC = ViewController1()
-        favouritesVC = ViewController2()
+        homeVC = HomeVC()
+        favouritesVC = LovedVC()
         viewControllers = [homeVC, favouritesVC]
         
         didPressOnButton(type: .home)
 
-        
-        
     }
     
-    
-
-    
-
 }
 
 

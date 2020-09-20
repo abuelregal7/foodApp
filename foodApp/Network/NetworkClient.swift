@@ -1,9 +1,9 @@
 //
 //  NetworkClient.swift
-//  FoodDelivery
+//  foodApp
 //
-//  Created by Osama on 10/28/19.
-//  Copyright © 2019 Osama Gamal. All rights reserved.
+//  Created by Ahmed on 6/19/20.
+//  Copyright © 2020 Ahmed. All rights reserved.
 //
 
 import Foundation
@@ -12,11 +12,15 @@ import Alamofire
 
 class NetworkClient {
     
+    static let shared   = NetworkClient()
+    let cache           = NSCache<NSString, UIImage>()
+    
     typealias onSuccess<T> = ( (T, String) -> ())
     typealias onFailure = ((_ error: Error) -> ())
     
     static func performRequest<T>(_ object: T.Type, router: APIRouter, success: @escaping onSuccess<T>, failure: @escaping onFailure) where T:Decodable {
-        Alamofire.request(router).responseJSON { (response) in
+        
+        AF.request(router).responseJSON { (response) in
             // ALAMOFIRE ERROR CHECK
 //            response.response?.statusCode
             if let error = response.error{

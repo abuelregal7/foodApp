@@ -20,10 +20,11 @@ class GFTitleLable: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(textAlignment: NSTextAlignment, fontZize: CGFloat){
+    init(textAlignment: NSTextAlignment, fontZize: CGFloat, textColor: UIColor){
         super.init(frame: .zero)
         self.textAlignment = textAlignment
-        self.font = UIFont.systemFont(ofSize: fontZize, weight: .bold)
+        self.textColor     = textColor
+        self.font          = UIFont.systemFont(ofSize: fontZize, weight: .bold)
         configure()
     }
     

@@ -20,9 +20,10 @@ class FDSecondaryTitleLable: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(textAlignment: NSTextAlignment,fontSize: CGFloat, fontWeight: UIFont.Weight){
+    init(textAlignment: NSTextAlignment,fontSize: CGFloat, fontWeight: UIFont.Weight, textColor: UIColor){
         super.init(frame: .zero)
         self.textAlignment = textAlignment
+        self.textColor     = textColor
         self.font          = UIFont.systemFont(ofSize: fontSize, weight: fontWeight)
         //self.font = UIFont.systemFont(ofSize: fontZize, weight: .bold)
         configure()

@@ -12,6 +12,7 @@ import Kingfisher
 
 class FDContainerCollectionView: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    
     var data: [CircleModel] = []
     var product = [CircleModel]()
     //var data: Home?
@@ -32,9 +33,8 @@ class FDContainerCollectionView: UIViewController, UICollectionViewDataSource, U
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getRest()
-        //self.collectionView.reloadData()
         
+        getRest()
         
         configureCollectionView()
         
@@ -57,17 +57,22 @@ class FDContainerCollectionView: UIViewController, UICollectionViewDataSource, U
     
     
     
+    
+    
     func getRest() {
         
         guard let url = URL(string: "http://i0sa.com/food/Home") else { return }
         AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default)
             .responseJSON { response in
-                
+            
                 switch response.result {
                     
                 case .success(let value):
+                    
                     if let JSON = value as? Dictionary<String, AnyObject> {
+                        
                         let status = JSON["data"] as! Dictionary<String, AnyObject>
+                        
                         print("--------------------------")
                         print("status is : \(status)")
                         print("--------------------------")
@@ -130,9 +135,9 @@ class FDContainerCollectionView: UIViewController, UICollectionViewDataSource, U
         return cell
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.collectionView.frame.size.width, height: 200)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: self.collectionView.frame.size.width, height: 200)
+//    }
 }
 
 

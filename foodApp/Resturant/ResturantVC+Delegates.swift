@@ -1,9 +1,9 @@
 //
 //  ResturantViewController.swift
-//  FoodDelivery
+//  foodApp
 //
-//  Created by Osama on 10/27/19.
-//  Copyright © 2019 Osama Gamal. All rights reserved.
+//  Created by Ahmed on 6/19/20.
+//  Copyright © 2020 Ahmed. All rights reserved.
 //
 
 import UIKit
@@ -14,9 +14,9 @@ extension ResturantVC: UITableViewDelegate, UITableViewDataSource {
         if section == 0 {
             let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "RestDetailsHeader") as! RestDetailsHeader
             cell.titleLbl.text = data?.title
-            cell.deliveryTimeLabel.text = data?.deliveryTime
+            cell.deliveryTimeLabel.text = data?.delivery_time
             cell.ratingLabel.text = "\(data?.rating ?? 0.0)"
-            cell.rateCountLabel.text = "\(data?.ratingCount ?? 0)"
+            cell.rateCountLabel.text = "\(data?.rating_count ?? 0)"
             cell.items = data?.genres ?? []
             return cell
         } else {

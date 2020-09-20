@@ -2,8 +2,8 @@
 //  ResturantFood.swift
 //  FoodDelivery
 //
-//  Created by Osama on 10/29/19.
-//  Copyright © 2019 Osama Gamal. All rights reserved.
+//  Created by Ahmed on 6/19/20.
+//  Copyright © 2020 Ahmed. All rights reserved.
 //
 
 import Foundation

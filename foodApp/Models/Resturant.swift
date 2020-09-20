@@ -1,29 +1,34 @@
 //
 //  Resturant.swift
-//  FoodDelivery
+///  foodApp
 //
-//  Created by Osama on 10/28/19.
-//  Copyright © 2019 Osama Gamal. All rights reserved.
+//  Created by Ahmed on 6/19/20.
+//  Copyright © 2020 Ahmed. All rights reserved.
 //
 
 import Foundation
 // MARK: - ResturantElement
-struct Resturant: Codable {
+struct Resturant: Codable, Equatable {
     let id: Int?
     let title: String?
     let image: String?
-    let deliveryTime: String?
+    let delivery_time: String?
     let rating: Double?
-    let ratingCount: Int?
+    let rating_count: Int?
     let genres: [String]?
     var liked: Bool?
-    let isExculsive: Bool?
-    enum CodingKeys: String, CodingKey {
-        case id, title, image
-        case deliveryTime = "delivery_time"
-        case rating
-        case ratingCount = "rating_count"
-        case genres, liked
-        case isExculsive = "is_exculsive"
-    }
+    //let is_exculsive: Bool?
+//    enum CodingKeys: String, CodingKey {
+//        case id, title, image
+//        case deliveryTime = "delivery_time"
+//        case rating
+//        case ratingCount = "rating_count"
+//        case genres, liked
+//        case isExculsive = "is_exculsive"
+//    }
+}
+struct Genres: Codable {
+    
+    let genres: [String]?
+    
 }

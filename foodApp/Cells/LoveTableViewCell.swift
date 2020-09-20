@@ -8,17 +8,8 @@
 
 import UIKit
 
-class LoveTableViewCell: UITableViewCell {
+class LoveTableViewCell: FDResturantTableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    static let loveReuseID = "LoveCell"
 
 }

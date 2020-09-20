@@ -1,9 +1,9 @@
 //
 //  Home.swift
-//  FoodDelivery
+//  foodApp
 //
-//  Created by Osama on 10/28/19.
-//  Copyright © 2019 Osama Gamal. All rights reserved.
+//  Created by Ahmed on 6/19/20.
+//  Copyright © 2020 Ahmed. All rights reserved.
 //
 
 import Foundation
@@ -19,5 +19,19 @@ struct CircleModel: Codable {
     let id: Int?
     let image: String?
     let title: String?
-    var isSelected: Bool? = false
+    //var isSelected: Bool? = false
 }
+//class CircleModel {
+//    
+//    var id : Int?
+//    var image: String?
+//    var title: String?
+//    
+//    init(id: Int, image: String, title: String) {
+//        
+//        self.id     = id
+//        self.image  = image
+//        self.title  = title
+//        
+//    }
+//}
